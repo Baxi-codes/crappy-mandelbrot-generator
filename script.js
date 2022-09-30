@@ -30,6 +30,7 @@ var pixels = id.data;
 var ar=200
 
 function generate(iters) {
+	iterations=parseInt(document.getElementById('iters').value);
 	ctx.beginPath();
 	ctx.moveTo(ox,0);
 	ctx.lineTo(ox,canvas.height);
