@@ -30,7 +30,6 @@ var pixels = id.data;
 var ar=200
 
 function generate(iters) {
-	iterations=parseInt(document.getElementById('iters').value);
 	ctx.beginPath();
 	ctx.moveTo(ox,0);
 	ctx.lineTo(ox,canvas.height);
@@ -52,5 +51,15 @@ function generate(iters) {
 				ctx.fillRect(i,j,1,1)
 			}
 		}
+	}
+}
+
+let i=0;
+function do_stuff() {
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+	generate(i)
+	if (i<iterations) {
+		++i;
+		requestAnimationFrame(do_stuff);
 	}
 }
