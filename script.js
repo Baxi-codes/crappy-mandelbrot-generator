@@ -47,7 +47,7 @@ function generate(iters) {
 				z=Complex.add(Complex.multiply(z,z),c);
 			}
 			var off = (j * id.width + i) * 4;
-			if (z.abs()<=1) {
+			if (z.abs()<=2) {
 				ctx.fillRect(i,j,1,1)
 			}
 		}
